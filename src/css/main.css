@@ -1,0 +1,26 @@
+@import url("navbar.css");
+@import url("section1.css");
+@import url("section2.css");
+@import url("section3.css");
+@import url("section4.css");
+@import url("section5.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+:root {
+    --nav-font: "Madimi One", serif;
+    --head-font: "Tilt Neon", serif;
+    --text-font: "Poppins", serif;
+}

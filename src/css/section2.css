@@ -1,0 +1,260 @@
+.section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: black;
+    margin-top: -50px;
+    height: 700px;
+    max-width: 1700px;
+}
+
+.section2_left {
+    background-image: url(../assest/images/port5.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: contrast(1.5) saturate(0.7);
+    width: 1000px;
+    height: 1000px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: 1s;
+}
+
+.section2_left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.section2_right {
+    color: #fff;
+}
+
+.section2_right h1 {
+    font-size: 50px;
+    font-family: var(--head-font);
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: 1s;
+}
+
+.section2_right h1.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section2_right>p {
+    width: 80%;
+    color: #d0d0d0;
+    font-family: var(--text-font);
+    line-height: 25px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: 1s;
+}
+
+.section2_right>p.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.section2_right .skills h3 {
+    margin: 20px 0;
+    font-size: 25px;
+    font-family: var(--head-font);
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: 1s;
+    text-shadow: 0px 0px 10px #ffffffd7;
+}
+
+.section2_right .skills h3.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.skills_content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+.skills_content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skills_content_c1 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    box-shadow: 0px 0px 10px #ffffffd7;
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    border-top: none;
+    padding: 0 10px;
+}
+
+.skills_content_c1:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    bottom: -2px;
+    height: 3px;
+    background: red;
+    width: 95%;
+    border-radius: 50px;
+
+}
+
+.skills_content_c1:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    bottom: -2px;
+    height: 3px;
+    background: red;
+    width: 85%;
+    border-radius: 50px;
+
+}
+
+.skills_content_c1:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    bottom: -2px;
+    height: 3px;
+    background: red;
+    width: 80%;
+    border-radius: 50px;
+
+}
+
+.skills_content_c1:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    bottom: -2px;
+    height: 3px;
+    background: red;
+    width: 65%;
+    border-radius: 50px;
+
+}
+
+.skills_content_c1 .skills_content_c1_left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills_content_c1_left p {
+    font-family: var(--head-font);
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.left1 i {
+    font-size: 25px;
+    color: rgb(255, 106, 0);
+}
+
+.left2 i {
+    font-size: 25px;
+    color: rgb(52, 191, 255);
+}
+
+.left3 i {
+    font-size: 25px;
+    color: yellow;
+}
+
+.left4 i {
+    font-size: 25px;
+    color: rgb(0, 149, 255);
+}
+
+.skills_content_c1 .percent {
+    font-family: var(--head-font);
+}
+
+
+
+@media only screen and (max-width:1350px) {
+    .section2_left {
+        width: 35%;
+    }
+
+    .section2_right {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+
+    .section2_right h1 {
+        font-size: 45px;
+    }
+
+}
+
+@media only screen and (max-width:1100px) {
+    .section2_left {
+        width: 40%;
+        height: 600px;
+        width: 500px;
+        margin-left: -100px;
+    }
+
+
+    .section2_right {
+        width: 60%;
+    }
+
+    .section2_right h1 {
+        font-size: 35px;
+    }
+
+    .section2_right p {
+        font-size: 14px;
+    }
+
+    .section2 {
+        gap: 0px;
+    }
+
+    .section2_right>p {
+        width: 90%;
+    }
+
+    .skills_content_c1 {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:760px) {
+    .section2_left {
+        display: none;
+    }
+
+    .section2_right {
+        padding-left: 50px;
+        width: 100%;
+    }
+}

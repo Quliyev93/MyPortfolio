@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 15px 100px;
+    max-width: 1700px;
+    color: #fff;
+    position: relative;
+    z-index: 5;
+}
+
+.navbar img {
+    top: 0;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    margin-left: -15px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: 1s;
+}
+
+.navbar img.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.navbar>i {
+    display: none;
+}
+
+.social2 {
+    display: none;
+}
+
+.nav_right {
+    align-items: center;
+    display: flex;
+    padding-top: 15px;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: 1s;
+}
+
+.nav_right.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav_right>i {
+    display: none;
+}
+
+.nav_right a {
+    color: #fff;
+    margin: 10px;
+    font-size: 16px;
+    position: relative;
+    font-family: var(--nav-font);
+}
+
+.nav_right a::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    border-radius: 5px;
+    height: 3px;
+    width: 0;
+    bottom: -3px;
+    left: 0;
+    transition: 0.5s;
+}
+
+.nav_right a:hover::after {
+    width: 100%;
+}
+
+.nav_right a:hover {
+    color: red;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width:1200px) {
+    .nav_right {
+        margin-right: -100px;
+    }
+}
+
+@media only screen and (max-width:960px) {
+    .nav_right {
+        position: absolute;
+
+        right: 100px;
+        top: 0;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        background: #000;
+        display: none;
+    }
+
+    .nav_right>a {
+        font-size: 20px;
+    }
+
+    .navbar {
+        padding: 15px 50px;
+        position: relative;
+    }
+
+    .navbar>i {
+        display: flex;
+        font-size: 30px;
+        margin-top: 20px;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .navbar>i:hover {
+        color: red;
+    }
+
+    .navbar>i:active {
+        transform: scale(0.97);
+    }
+
+    .social2 {
+        display: flex;
+    }
+
+    .social2>a {
+        font-size: 20px;
+    }
+
+    .nav_right>i {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        transform: rotate(0deg);
+        transition: 0.3s;
+    }
+
+    .nav_right>i:hover {
+        transform: rotate(180deg);
+        color: red;
+    }
+
+    .nav_right>i:active {
+        transform: scale(0.97);
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .navbar img {
+        width: 100px;
+        height: 100px;
+    }
+}
