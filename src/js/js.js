@@ -50,7 +50,8 @@ const target = document.querySelectorAll(".target");
 const callBack = (entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add("active")
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target);
         }
         else {
             entry.target.classList.remove("active")
